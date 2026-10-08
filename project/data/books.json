@@ -1,0 +1,122 @@
+[
+    {
+        "book_id": "B001",
+        "title": "Python Crash Course",
+        "author": "Eric Matthes",
+        "isbn": "9781593279288",
+        "category": "Programming",
+        "year": 2019,
+        "total_copies": 3,
+        "available_copies": 2
+    },
+    {
+        "book_id": "B002",
+        "title": "Think Python",
+        "author": "Allen Downey",
+        "isbn": "9781491929568",
+        "category": "Programming",
+        "year": 2015,
+        "total_copies": 2,
+        "available_copies": 2
+    },
+    {
+        "book_id": "B003",
+        "title": "Automate the Boring Stuff",
+        "author": "Al Sweigart",
+        "isbn": "9781593275990",
+        "category": "Programming",
+        "year": 2015,
+        "total_copies": 2,
+        "available_copies": 2
+    },
+    {
+        "book_id": "B004",
+        "title": "Clean Code",
+        "author": "Robert Martin",
+        "isbn": "9780132350884",
+        "category": "Programming",
+        "year": 2008,
+        "total_copies": 2,
+        "available_copies": 1
+    },
+    {
+        "book_id": "B005",
+        "title": "Introduction to Algorithms",
+        "author": "Thomas Cormen",
+        "isbn": "9780262033848",
+        "category": "Computer Science",
+        "year": 2009,
+        "total_copies": 2,
+        "available_copies": 2
+    },
+    {
+        "book_id": "B006",
+        "title": "Data Structures Using C",
+        "author": "Reema Thareja",
+        "isbn": "9780198099307",
+        "category": "Computer Science",
+        "year": 2014,
+        "total_copies": 3,
+        "available_copies": 3
+    },
+    {
+        "book_id": "B007",
+        "title": "Engineering Mathematics",
+        "author": "B S Grewal",
+        "isbn": "9788174091955",
+        "category": "Mathematics",
+        "year": 2012,
+        "total_copies": 4,
+        "available_copies": 4
+    },
+    {
+        "book_id": "B008",
+        "title": "Concepts of Physics",
+        "author": "H C Verma",
+        "isbn": "9788177091878",
+        "category": "Physics",
+        "year": 2017,
+        "total_copies": 3,
+        "available_copies": 3
+    },
+    {
+        "book_id": "B009",
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "isbn": "9780553380163",
+        "category": "Science",
+        "year": 1998,
+        "total_copies": 2,
+        "available_copies": 2
+    },
+    {
+        "book_id": "B010",
+        "title": "Wings of Fire",
+        "author": "A P J Abdul Kalam",
+        "isbn": "9788173711466",
+        "category": "Biography",
+        "year": 1999,
+        "total_copies": 3,
+        "available_copies": 2
+    },
+    {
+        "book_id": "B011",
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "isbn": "9780062315007",
+        "category": "Fiction",
+        "year": 1988,
+        "total_copies": 2,
+        "available_copies": 2
+    },
+    {
+        "book_id": "B012",
+        "title": "Malgudi Days",
+        "author": "R K Narayan",
+        "isbn": "9780143039655",
+        "category": "Fiction",
+        "year": 1943,
+        "total_copies": 1,
+        "available_copies": 1
+    }
+]

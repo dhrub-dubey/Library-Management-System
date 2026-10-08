@@ -1,0 +1,338 @@
+[
+  {
+    "id": "TC01",
+    "module": "Login",
+    "action": "Login with username admin, password admin123",
+    "expected": "Login successful",
+    "actual": "Login successful: Head Librarian",
+    "status": "PASS"
+  },
+  {
+    "id": "TC02",
+    "module": "Login",
+    "action": "Login with admin and a wrong password",
+    "expected": "Login rejected",
+    "actual": "Login failed",
+    "status": "PASS"
+  },
+  {
+    "id": "TC03",
+    "module": "Login",
+    "action": "Login with a username that does not exist",
+    "expected": "Login rejected",
+    "actual": "Login failed",
+    "status": "PASS"
+  },
+  {
+    "id": "TC04",
+    "module": "Books",
+    "action": "Add a book with all valid details",
+    "expected": "Book added with a new ID (B005)",
+    "actual": "Book added with ID B005; copies 2/2",
+    "status": "PASS"
+  },
+  {
+    "id": "TC05",
+    "module": "Books",
+    "action": "Add a book with a blank title",
+    "expected": "Error: Title cannot be empty",
+    "actual": "Error: Title cannot be empty.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC06",
+    "module": "Books",
+    "action": "Add a book with ISBN '12345'",
+    "expected": "Error: ISBN must be 10 or 13 digits",
+    "actual": "Error: ISBN must be 10 or 13 digits (hyphens allowed).",
+    "status": "PASS"
+  },
+  {
+    "id": "TC07",
+    "module": "Books",
+    "action": "Add a book using an ISBN that already exists",
+    "expected": "Error: ISBN already exists",
+    "actual": "Error: ISBN 9781593279288 already exists (B001: Python Crash Course).",
+    "status": "PASS"
+  },
+  {
+    "id": "TC08",
+    "module": "Books",
+    "action": "Enter 'abc' as number of copies",
+    "expected": "Error: copies must be a whole number",
+    "actual": "Error: Number of copies must be a whole number.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC09",
+    "module": "Books",
+    "action": "Enter 3000 as publication year",
+    "expected": "Error: year must be in the allowed range",
+    "actual": "Error: Publication year must be between 1000 and 2026.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC10",
+    "module": "Books",
+    "action": "Search books by title with keyword 'python'",
+    "expected": "Books whose title contains 'python' are listed",
+    "actual": "2 result(s): Python Crash Course, Think Python",
+    "status": "PASS"
+  },
+  {
+    "id": "TC11",
+    "module": "Books",
+    "action": "Search by author with keyword 'zzzz'",
+    "expected": "0 results",
+    "actual": "0 result(s)",
+    "status": "PASS"
+  },
+  {
+    "id": "TC12",
+    "module": "Books",
+    "action": "Update total copies of B001 from 3 to 5",
+    "expected": "Copies become 5/5",
+    "actual": "Copies now 5/5",
+    "status": "PASS"
+  },
+  {
+    "id": "TC13",
+    "module": "Books",
+    "action": "Reduce copies of B001 to 1 while 2 copies are issued",
+    "expected": "Error: cannot reduce below issued copies",
+    "actual": "Error: Cannot reduce copies to 1: 2 copies are currently issued.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC14",
+    "module": "Books",
+    "action": "Delete book B004 (no copies issued)",
+    "expected": "Book deleted",
+    "actual": "Deleted 'Wings of Fire'; books left: 3",
+    "status": "PASS"
+  },
+  {
+    "id": "TC15",
+    "module": "Books",
+    "action": "Delete book B004 while a copy is issued",
+    "expected": "Error: cannot delete issued book",
+    "actual": "Error: Cannot delete 'Wings of Fire': 1 copy(ies) currently issued.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC16",
+    "module": "Books",
+    "action": "View book with ID B999 (does not exist)",
+    "expected": "Error: no book found",
+    "actual": "Error: No book found with ID B999.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC17",
+    "module": "Members",
+    "action": "Register a member with valid details",
+    "expected": "Member registered with ID M004",
+    "actual": "Member registered with ID M004",
+    "status": "PASS"
+  },
+  {
+    "id": "TC18",
+    "module": "Members",
+    "action": "Register with e-mail 'sneha.example.com' (no @)",
+    "expected": "Error: invalid e-mail",
+    "actual": "Error: Enter a valid e-mail address (e.g. name@example.com).",
+    "status": "PASS"
+  },
+  {
+    "id": "TC19",
+    "module": "Members",
+    "action": "Register with phone '12345'",
+    "expected": "Error: invalid phone",
+    "actual": "Error: Phone must be a 10-digit mobile number starting with 6-9.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC20",
+    "module": "Members",
+    "action": "Register with an e-mail already in use",
+    "expected": "Error: e-mail already registered",
+    "actual": "Error: E-mail aarav@example.com is already registered (M001).",
+    "status": "PASS"
+  },
+  {
+    "id": "TC21",
+    "module": "Members",
+    "action": "Register with name 'R0han' (contains a digit)",
+    "expected": "Error: name must contain letters only",
+    "actual": "Error: Name can contain only letters, spaces, '.', '-' and apostrophes.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC22",
+    "module": "Members",
+    "action": "Update phone of M002 to 7012345678",
+    "expected": "Phone updated",
+    "actual": "Phone updated to 7012345678",
+    "status": "PASS"
+  },
+  {
+    "id": "TC23",
+    "module": "Members",
+    "action": "Delete member M001 who has an issued book",
+    "expected": "Error: cannot delete member",
+    "actual": "Error: Cannot delete Aarav Sharma: 1 book(s) not returned yet.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC24",
+    "module": "Members",
+    "action": "Delete member M003 with no issued books",
+    "expected": "Member deleted",
+    "actual": "Deleted Rohan Gupta; members left: 2",
+    "status": "PASS"
+  },
+  {
+    "id": "TC25",
+    "module": "Issue/Return",
+    "action": "Issue B001 to M001",
+    "expected": "Book issued, due date = issue date + 14 days, copies reduce by 1",
+    "actual": "Issued T0001; due 2026-10-15; copies left 2",
+    "status": "PASS"
+  },
+  {
+    "id": "TC26",
+    "module": "Issue/Return",
+    "action": "Issue B002 (only 1 copy, already issued) to another member",
+    "expected": "Error: no copies available",
+    "actual": "Error: No copies of 'Clean Code' are available right now.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC27",
+    "module": "Issue/Return",
+    "action": "Issue a 4th book to a member who already holds 3",
+    "expected": "Error: limit reached",
+    "actual": "Error: Aarav Sharma already has 3 books issued (limit reached).",
+    "status": "PASS"
+  },
+  {
+    "id": "TC28",
+    "module": "Issue/Return",
+    "action": "Issue the same book twice to the same member",
+    "expected": "Error: member already has a copy",
+    "actual": "Error: Aarav Sharma already has a copy of 'Python Crash Course'.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC29",
+    "module": "Issue/Return",
+    "action": "Issue a book to member M999 (does not exist)",
+    "expected": "Error: no member found",
+    "actual": "Error: No member found with ID M999.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC30",
+    "module": "Issue/Return",
+    "action": "Return a book before the due date",
+    "expected": "Fine Rs 0, copy becomes available again",
+    "actual": "Fine Rs 0; copies available 3/3",
+    "status": "PASS"
+  },
+  {
+    "id": "TC31",
+    "module": "Issue/Return",
+    "action": "Return a book 5 days after the due date",
+    "expected": "5 days late, Fine Rs 10",
+    "actual": "Returned 5 days late; Fine Rs 10",
+    "status": "PASS"
+  },
+  {
+    "id": "TC32",
+    "module": "Issue/Return",
+    "action": "Return a book the member never borrowed",
+    "expected": "Error: member has not borrowed this book",
+    "actual": "Error: Priya Verma has not borrowed 'Python Crash Course' (or already returned it).",
+    "status": "PASS"
+  },
+  {
+    "id": "TC33",
+    "module": "Issue/Return",
+    "action": "Return with a date earlier than the issue date",
+    "expected": "Error: return date before issue date",
+    "actual": "Error: Return date cannot be before the issue date.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC34",
+    "module": "Issue/Return",
+    "action": "View overdue list (one overdue, one on time)",
+    "expected": "Only the overdue loan (T0001) is listed",
+    "actual": "1 overdue loan(s): T0001",
+    "status": "PASS"
+  },
+  {
+    "id": "TC35",
+    "module": "Reports",
+    "action": "Generate summary report after issuing one book",
+    "expected": "Titles 4, copies 8, available 7, issued 1, members 3",
+    "actual": "Titles 4, copies 8, available 7, issued 1, members 3",
+    "status": "PASS"
+  },
+  {
+    "id": "TC36",
+    "module": "Reports",
+    "action": "Export the summary report to a file",
+    "expected": "A non-empty .txt report file is created",
+    "actual": "File created: summary_report_20261004_135854.txt (non-empty)",
+    "status": "PASS"
+  },
+  {
+    "id": "TC37",
+    "module": "Storage",
+    "action": "Add data, then reload the data files from disk",
+    "expected": "Data is still present (5 books, 3 members, 1 transaction)",
+    "actual": "After reload: 5 books, 3 members, 1 transaction(s)",
+    "status": "PASS"
+  },
+  {
+    "id": "TC38",
+    "module": "Storage",
+    "action": "Start the program with a corrupted books.json",
+    "expected": "Error: data file is corrupted (program does not crash)",
+    "actual": "Error: Data file 'books.json' is corrupted (not valid JSON).",
+    "status": "PASS"
+  },
+  {
+    "id": "TC39",
+    "module": "Storage",
+    "action": "Start the program with no data files at all",
+    "expected": "Starts with empty data and creates the default login",
+    "actual": "Started with 0 books, 0 members; default login created: True",
+    "status": "PASS"
+  },
+  {
+    "id": "TC40",
+    "module": "Storage",
+    "action": "Create a backup of the data files",
+    "expected": "Backup folder with the three data files",
+    "actual": "Backup created with files: ['books.json', 'members.json', 'transactions.json']",
+    "status": "PASS"
+  },
+  {
+    "id": "TC41",
+    "module": "Validation",
+    "action": "Type menu option '9' when only 0-2 are valid",
+    "expected": "Error: invalid choice",
+    "actual": "Error: Invalid choice. Please pick one of the listed options.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC42",
+    "module": "Validation",
+    "action": "Type book ID 'b1' (lower case, no zeros)",
+    "expected": "Accepted and normalised to B001",
+    "actual": "'b1' becomes 'B001'",
+    "status": "PASS"
+  }
+]

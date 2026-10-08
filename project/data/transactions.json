@@ -1,0 +1,47 @@
+[
+    {
+        "txn_id": "T0001",
+        "book_id": "B002",
+        "member_id": "M003",
+        "issue_date": "2026-09-01",
+        "due_date": "2026-09-15",
+        "return_date": "2026-09-12",
+        "fine": 0
+    },
+    {
+        "txn_id": "T0002",
+        "book_id": "B005",
+        "member_id": "M004",
+        "issue_date": "2026-08-20",
+        "due_date": "2026-09-03",
+        "return_date": "2026-09-10",
+        "fine": 14
+    },
+    {
+        "txn_id": "T0003",
+        "book_id": "B004",
+        "member_id": "M002",
+        "issue_date": "2026-09-28",
+        "due_date": "2026-10-12",
+        "return_date": null,
+        "fine": 0
+    },
+    {
+        "txn_id": "T0004",
+        "book_id": "B001",
+        "member_id": "M001",
+        "issue_date": "2026-09-10",
+        "due_date": "2026-09-24",
+        "return_date": null,
+        "fine": 0
+    },
+    {
+        "txn_id": "T0005",
+        "book_id": "B010",
+        "member_id": "M001",
+        "issue_date": "2026-10-01",
+        "due_date": "2026-10-15",
+        "return_date": null,
+        "fine": 0
+    }
+]
